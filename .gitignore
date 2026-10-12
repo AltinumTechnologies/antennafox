@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Build output
+build/
+dist/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local AI development tools (never part of the project)
+.claude/
+CLAUDE.md
+.cursor/
+.cursorrules
+.aider*
+.codex/
+.gemini/
+.copilot/
+.windsurf/
+.continue/

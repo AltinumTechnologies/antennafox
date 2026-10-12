@@ -1,0 +1,35 @@
+name: package
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  macos-app:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Build AntennaFox.app on a uv-managed CPython
+        run: ./packaging/macos/build.sh
+      - name: Verify bundle contents and licenses
+        run: |
+          uv run python scripts/bundle_inventory.py dist/AntennaFox.app
+          test -f dist/AntennaFox.app/Contents/Resources/LICENSES/LGPL-3.0-only.txt
+          test -f dist/AntennaFox.app/Contents/Resources/LICENSES/GPL-3.0-or-later.txt
+          test -f dist/AntennaFox.app/Contents/Resources/QT_NOTICE.md
+          ls dist/AntennaFox.app/Contents/Frameworks/PySide6/Qt/lib
+          codesign --verify --deep --strict dist/AntennaFox.app
+      - name: Smoke-start the bundle
+        run: |
+          open dist/AntennaFox.app
+          sleep 8
+          pgrep -f "AntennaFox.app/Contents/MacOS/AntennaFox"
+          pkill -f "AntennaFox.app/Contents/MacOS/AntennaFox"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AntennaFox-macOS
+          path: |
+            dist/AntennaFox.app
+            dist/AntennaFox.app/Contents/Resources/BUNDLE_INVENTORY.md

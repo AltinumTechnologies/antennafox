@@ -1,0 +1,24 @@
+version = 1
+SPDX-PackageName = "AntennaFox"
+SPDX-PackageSupplier = "Altinum Technologies e.U. <https://altinum.tech>"
+SPDX-PackageDownloadLocation = "https://github.com/AltinumTechnologies/antennafox"
+
+[[annotations]]
+path = ["src/antennafox/catalog/data/**", "src/antennafox/assets/**", "assets/**", "samples/**", "tests/data/**",
+        "docs/**", "packaging/macos/*.png", "*.md", ".github/**", "pyproject.toml", "uv.lock", ".python-version",
+        ".gitignore", "REUSE.toml"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Altinum Technologies e.U."
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["LICENSE", "NOTICE"]
+precedence = "override"
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["packaging/licenses/**"]
+precedence = "override"
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "LicenseRef-LicenseText"

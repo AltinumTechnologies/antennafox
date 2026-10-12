@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: LibreVNA hardware and LibreVNA-GUI
+    url: https://github.com/jankae/LibreVNA
+    about: Problems with the LibreVNA device or the official LibreVNA-GUI belong to the LibreVNA project.

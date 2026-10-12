@@ -1,0 +1,40 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, expected and actual behavior.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AntennaFox version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system and Python version
+      placeholder: "macOS 15.5, Python 3.12"
+  - type: input
+    id: librevna
+    attributes:
+      label: LibreVNA-GUI, firmware and hardware revision
+      description: Shown on the Setup page after connecting. Leave empty for demo mode or file imports.
+      placeholder: "GUI 1.6.5, firmware 1.6.5, V1 Rev.B"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Diagnostics
+      description: Attach the file from Help → Save diagnostics…, or paste the relevant log lines.
+      render: text
+  - type: textarea
+    id: data
+    attributes:
+      label: Measurement data
+      description: Attach an exported .s1p or a saved .afox session if it helps to reproduce the problem.

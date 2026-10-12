@@ -1,0 +1,577 @@
+{
+  "schema": "antennafox.catalog/1",
+  "version": "2026.10-1",
+  "disclaimer": {
+    "de": "Frequenzbereiche dienen der technischen Orientierung und ersetzen keine Prüfung der aktuell gültigen Frequenznutzungspläne, Geräteklassen oder Zulassungen.",
+    "en": "Frequency ranges are technical guidance and do not replace checking the current frequency allocation, device class rules, or certifications."
+  },
+  "profiles": [
+    {
+      "id": "ism24",
+      "group": "2.4 GHz",
+      "name": {
+        "de": "ISM 2,4 GHz (Regulierungsband)",
+        "en": "ISM 2.4 GHz (regulatory band)"
+      },
+      "region": "global",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          2400000000,
+          2483500000
+        ]
+      ],
+      "comment": {
+        "de": "Gesamtes ISM-Band; Wi-Fi-Kanäle belegen nur Teile davon.",
+        "en": "Entire ISM band; Wi-Fi channels occupy parts of it."
+      }
+    },
+    {
+      "id": "wifi24_eu",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 2,4 GHz Kanäle 1–13 (EU, 20 MHz)",
+        "en": "Wi-Fi 2.4 GHz channels 1–13 (EU, 20 MHz)"
+      },
+      "region": "EU",
+      "kind": "channels",
+      "channels": [
+        {
+          "label": "1",
+          "center_hz": 2412000000,
+          "width_hz": 20000000
+        },
+        {
+          "label": "6",
+          "center_hz": 2437000000,
+          "width_hz": 20000000
+        },
+        {
+          "label": "11",
+          "center_hz": 2462000000,
+          "width_hz": 20000000
+        },
+        {
+          "label": "13",
+          "center_hz": 2472000000,
+          "width_hz": 20000000
+        }
+      ],
+      "intervals_hz": [
+        [
+          2402000000,
+          2482000000
+        ]
+      ],
+      "comment": {
+        "de": "Belegte Bandbreite der Kanäle 1–13 (Mitten 2412–2472 MHz, ±10 MHz).",
+        "en": "Occupied bandwidth of channels 1–13 (centers 2412–2472 MHz, ±10 MHz)."
+      }
+    },
+    {
+      "id": "ble",
+      "group": "Bluetooth",
+      "name": {
+        "de": "Bluetooth LE (40 Kanäle à 2 MHz)",
+        "en": "Bluetooth LE (40 × 2 MHz channels)"
+      },
+      "region": "global",
+      "kind": "protocol",
+      "intervals_hz": [
+        [
+          2401000000,
+          2481000000
+        ]
+      ],
+      "comment": {
+        "de": "Kanalmitten 2402–2480 MHz.",
+        "en": "Channel centers 2402–2480 MHz."
+      }
+    },
+    {
+      "id": "bt_classic",
+      "group": "Bluetooth",
+      "name": {
+        "de": "Bluetooth Classic (79 Kanäle à 1 MHz)",
+        "en": "Bluetooth Classic (79 × 1 MHz channels)"
+      },
+      "region": "global",
+      "kind": "protocol",
+      "intervals_hz": [
+        [
+          2401500000,
+          2480500000
+        ]
+      ],
+      "comment": {
+        "de": "Kanalmitten 2402–2480 MHz.",
+        "en": "Channel centers 2402–2480 MHz."
+      }
+    },
+    {
+      "id": "wifi5_eu_a",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 5 GHz EU Band A (5150–5250 MHz)",
+        "en": "Wi-Fi 5 GHz EU band A (5150–5250 MHz)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5150000000,
+          5250000000
+        ]
+      ],
+      "comment": {
+        "de": "Kanäle 36–48; in der EU grundsätzlich Innenbereich.",
+        "en": "Channels 36–48; generally indoor in the EU."
+      }
+    },
+    {
+      "id": "wifi5_eu_a2",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 5 GHz EU Band A2 (5250–5350 MHz, DFS)",
+        "en": "Wi-Fi 5 GHz EU band A2 (5250–5350 MHz, DFS)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5250000000,
+          5350000000
+        ]
+      ],
+      "comment": {
+        "de": "Kanäle 52–64; DFS/TPC erforderlich.",
+        "en": "Channels 52–64; DFS/TPC required."
+      }
+    },
+    {
+      "id": "wifi5_eu_b",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 5 GHz EU Band B (5470–5725 MHz, DFS)",
+        "en": "Wi-Fi 5 GHz EU band B (5470–5725 MHz, DFS)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5470000000,
+          5725000000
+        ]
+      ],
+      "comment": {
+        "de": "Kanäle 100–140; DFS/TPC erforderlich.",
+        "en": "Channels 100–140; DFS/TPC required."
+      }
+    },
+    {
+      "id": "wifi5_us_unii3",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 5 GHz U-NII-3 (5725–5850 MHz, USA)",
+        "en": "Wi-Fi 5 GHz U-NII-3 (5725–5850 MHz, US)"
+      },
+      "region": "US",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5725000000,
+          5850000000
+        ]
+      ],
+      "comment": {
+        "de": "Regionsspezifisch; in der EU nicht automatisch als Wi-Fi-Band anwendbar.",
+        "en": "Region specific; not automatically a Wi-Fi band in the EU."
+      }
+    },
+    {
+      "id": "wifi5_full",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 5 GHz Gesamtbereich (5150–5850 MHz)",
+        "en": "Wi-Fi 5 GHz full range (5150–5850 MHz)"
+      },
+      "region": "global",
+      "kind": "aggregate",
+      "intervals_hz": [
+        [
+          5150000000,
+          5850000000
+        ]
+      ],
+      "comment": {
+        "de": "Gesamter 5-GHz-Wi-Fi-Bereich, wie ihn Dual-Band-Module abstimmen. Nicht identisch mit den in einer Region erlaubten Kanälen.",
+        "en": "The whole 5 GHz Wi-Fi range as tuned by dual-band radio modules. Not identical to the channels allowed in a region."
+      }
+    },
+    {
+      "id": "wifi6_eu_lpi",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 6E EU (5945–6425 MHz)",
+        "en": "Wi-Fi 6E EU (5945–6425 MHz)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5945000000,
+          6425000000
+        ]
+      ],
+      "comment": {
+        "de": "Nur der vom Messgerät unterstützte Teil kann bewertet werden (LibreVNA typ. bis 6 GHz). ESP32-C5 unterstützt kein 6-GHz-Wi-Fi.",
+        "en": "Only the part supported by the instrument can be assessed (LibreVNA typically up to 6 GHz). ESP32-C5 does not support 6 GHz Wi-Fi."
+      }
+    },
+    {
+      "id": "wifi6_us",
+      "group": "Wi-Fi",
+      "name": {
+        "de": "Wi-Fi 6E USA (5925–7125 MHz)",
+        "en": "Wi-Fi 6E US (5925–7125 MHz)"
+      },
+      "region": "US",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          5925000000,
+          7125000000
+        ]
+      ],
+      "comment": {
+        "de": "Regionsspezifisch; überwiegend außerhalb des LibreVNA-Messbereichs.",
+        "en": "Region specific; mostly outside the LibreVNA range."
+      }
+    },
+    {
+      "id": "srd433_eu",
+      "group": "Sub-GHz",
+      "name": {
+        "de": "SRD 433 MHz EU (433,05–434,79 MHz)",
+        "en": "SRD 433 MHz EU (433.05–434.79 MHz)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          433050000,
+          434790000
+        ]
+      ],
+      "comment": {
+        "de": "ISM/SRD 433 MHz.",
+        "en": "ISM/SRD 433 MHz."
+      }
+    },
+    {
+      "id": "srd868_eu",
+      "group": "Sub-GHz",
+      "name": {
+        "de": "SRD 863–870 MHz EU (gesamt)",
+        "en": "SRD 863–870 MHz EU (whole)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          863000000,
+          870000000
+        ]
+      ],
+      "comment": {
+        "de": "Gesamter SRD-Bereich; Leistung/Duty-Cycle gelten je Unterband.",
+        "en": "Whole SRD range; power/duty cycle rules apply per sub-band."
+      }
+    },
+    {
+      "id": "srd868_g",
+      "group": "Sub-GHz",
+      "name": {
+        "de": "SRD 868,0–868,6 MHz (Unterband, 1 %)",
+        "en": "SRD 868.0–868.6 MHz (sub-band, 1 %)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          868000000,
+          868600000
+        ]
+      ],
+      "comment": {
+        "de": "Typisch LoRaWAN-Standardkanäle.",
+        "en": "Typical LoRaWAN default channels."
+      }
+    },
+    {
+      "id": "srd868_g3",
+      "group": "Sub-GHz",
+      "name": {
+        "de": "SRD 869,4–869,65 MHz (Unterband, 10 %, 500 mW)",
+        "en": "SRD 869.4–869.65 MHz (sub-band, 10 %, 500 mW)"
+      },
+      "region": "EU",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          869400000,
+          869650000
+        ]
+      ],
+      "comment": {
+        "de": "Häufig von Meshtastic/MeshCore genutzt.",
+        "en": "Commonly used by Meshtastic/MeshCore."
+      }
+    },
+    {
+      "id": "meshtastic_eu868_longfast",
+      "group": "LoRa Mesh",
+      "name": {
+        "de": "Meshtastic EU_868 LongFast (869,525 MHz, 250 kHz)",
+        "en": "Meshtastic EU_868 LongFast (869.525 MHz, 250 kHz)"
+      },
+      "region": "EU",
+      "kind": "channels",
+      "channels": [
+        {
+          "label": "LongFast",
+          "center_hz": 869525000,
+          "width_hz": 250000
+        }
+      ],
+      "intervals_hz": [
+        [
+          869400000,
+          869650000
+        ]
+      ],
+      "comment": {
+        "de": "Konfigurierter Kanal (Mitte ± halbe LoRa-Bandbreite). Bei anderer Konfiguration Profil anpassen.",
+        "en": "Configured channel (center ± half LoRa bandwidth). Adjust profile for other configurations."
+      }
+    },
+    {
+      "id": "meshcore_eu_narrow",
+      "group": "LoRa Mesh",
+      "name": {
+        "de": "MeshCore EU/UK Narrow (869,618 MHz, 62,5 kHz)",
+        "en": "MeshCore EU/UK Narrow (869.618 MHz, 62.5 kHz)"
+      },
+      "region": "EU",
+      "kind": "channels",
+      "channels": [
+        {
+          "label": "Narrow",
+          "center_hz": 869618000,
+          "width_hz": 62500
+        }
+      ],
+      "intervals_hz": [
+        [
+          869586750,
+          869649250
+        ]
+      ],
+      "comment": {
+        "de": "Konfigurierter Kanal; gegen tatsächliche Node-Einstellung prüfen.",
+        "en": "Configured channel; verify against the actual node setting."
+      }
+    },
+    {
+      "id": "lorawan_eu868_default",
+      "group": "LoRa Mesh",
+      "name": {
+        "de": "LoRaWAN EU868 Standardkanäle (868,1/868,3/868,5 MHz)",
+        "en": "LoRaWAN EU868 default channels (868.1/868.3/868.5 MHz)"
+      },
+      "region": "EU",
+      "kind": "channels",
+      "channels": [
+        {
+          "label": "868.1",
+          "center_hz": 868100000,
+          "width_hz": 125000
+        },
+        {
+          "label": "868.3",
+          "center_hz": 868300000,
+          "width_hz": 125000
+        },
+        {
+          "label": "868.5",
+          "center_hz": 868500000,
+          "width_hz": 125000
+        }
+      ],
+      "intervals_hz": [
+        [
+          868037500,
+          868162500
+        ],
+        [
+          868237500,
+          868362500
+        ],
+        [
+          868437500,
+          868562500
+        ]
+      ],
+      "comment": {
+        "de": "Drei Pflichtkanäle à 125 kHz (getrennte Intervalle).",
+        "en": "Three mandatory 125 kHz channels (split intervals)."
+      }
+    },
+    {
+      "id": "ism915_us",
+      "group": "Sub-GHz",
+      "name": {
+        "de": "ISM 902–928 MHz (Nordamerika)",
+        "en": "ISM 902–928 MHz (North America)"
+      },
+      "region": "US",
+      "kind": "regulatory",
+      "intervals_hz": [
+        [
+          902000000,
+          928000000
+        ]
+      ],
+      "comment": {
+        "de": "Regionsspezifische Referenz; in der EU nicht anwendbar.",
+        "en": "Region-specific reference; not applicable in the EU."
+      }
+    },
+    {
+      "id": "gnss_l1",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS GPS L1 / Galileo E1 (1575,42 MHz)",
+        "en": "GNSS GPS L1 / Galileo E1 (1575.42 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1573374000,
+          1577466000
+        ]
+      ],
+      "comment": {
+        "de": "1575,42 ± 2,046 MHz (E1-Hauptkeulen). Nur passive HF-Anpassung; LNA/Rauschzahl aktiver Antennen werden nicht bewertet.",
+        "en": "1575.42 ± 2.046 MHz (E1 main lobes). Passive RF match only; LNA/noise figure of active antennas not assessed."
+      }
+    },
+    {
+      "id": "gnss_b1i",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS BeiDou B1I (1561,098 MHz)",
+        "en": "GNSS BeiDou B1I (1561.098 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1559052000,
+          1563144000
+        ]
+      ],
+      "comment": {
+        "de": "1561,098 ± 2,046 MHz.",
+        "en": "1561.098 ± 2.046 MHz."
+      }
+    },
+    {
+      "id": "gnss_glonass_l1",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS GLONASS L1 (≈1598–1606 MHz)",
+        "en": "GNSS GLONASS L1 (≈1598–1606 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1598000000,
+          1606000000
+        ]
+      ],
+      "comment": {
+        "de": "FDMA-Kanäle.",
+        "en": "FDMA channels."
+      }
+    },
+    {
+      "id": "gnss_l5",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS GPS L5 / Galileo E5a (1176,45 MHz)",
+        "en": "GNSS GPS L5 / Galileo E5a (1176.45 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1166220000,
+          1186680000
+        ]
+      ],
+      "comment": {
+        "de": "1176,45 ± 10,23 MHz.",
+        "en": "1176.45 ± 10.23 MHz."
+      }
+    },
+    {
+      "id": "gnss_e5b",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS Galileo E5b / BeiDou B2 (1207,14 MHz)",
+        "en": "GNSS Galileo E5b / BeiDou B2 (1207.14 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1196910000,
+          1217370000
+        ]
+      ],
+      "comment": {
+        "de": "1207,14 ± 10,23 MHz.",
+        "en": "1207.14 ± 10.23 MHz."
+      }
+    },
+    {
+      "id": "gnss_l2",
+      "group": "GNSS",
+      "name": {
+        "de": "GNSS GPS L2 (1227,60 MHz)",
+        "en": "GNSS GPS L2 (1227.60 MHz)"
+      },
+      "region": "global",
+      "kind": "gnss",
+      "gnss": true,
+      "intervals_hz": [
+        [
+          1217370000,
+          1237830000
+        ]
+      ],
+      "comment": {
+        "de": "1227,60 ± 10,23 MHz.",
+        "en": "1227.60 ± 10.23 MHz."
+      }
+    }
+  ]
+}
